@@ -4,18 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0d2946" />
-    <meta
-      name="description"
-      content="Aadhar Hospital in Tasgaon — find visiting hours, contact details, and directions on Sangli–Vita Road."
-    />
+    <meta name="description" content="Aadhar Hospital in Tasgaon — location, published visiting hours, contact details, and directions." />
     <title>Aadhar Hospital | Tasgaon</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <script>document.documentElement.classList.add('has-js', 'is-loading');</script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script>document.documentElement.classList.add('has-js', 'is-loading'); window.__aadharLoaderStartedAt = performance.now();</script>
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <script src="assets/js/site.js" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -44,363 +40,8 @@
         ]
       }
     </script>
-    <style>
-      :root {
-        --ink: #0d2946;
-        --ink-2: #163858;
-        --teal: #287f79;
-        --teal-dark: #1f6762;
-        --teal-pale: #e2f1ee;
-        --stone: #f4f6f5;
-        --warm: #fbfaf7;
-        --mist: #eef3f4;
-        --muted: #627388;
-        --line: #dce5e6;
-        --accent: #d59b46;
-        --white: #ffffff;
-        --shadow: 0 24px 64px rgba(13, 41, 70, 0.11);
-        --soft-shadow: 0 12px 30px rgba(13, 41, 70, 0.07);
-      }
-
-      * { box-sizing: border-box; }
-      html { scroll-behavior: smooth; }
-      body {
-        margin: 0;
-        min-width: 320px;
-        background: var(--warm);
-        color: var(--ink);
-        font-family: "Manrope", Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-      }
-      a { color: inherit; text-decoration: none; }
-      button, a { -webkit-tap-highlight-color: transparent; }
-      .page { overflow: clip; }
-      .container { width: min(1160px, calc(100% - 48px)); margin: 0 auto; }
-      .skip-link {
-        position: fixed;
-        z-index: 100;
-        top: 12px;
-        left: 12px;
-        padding: 10px 15px;
-        border-radius: 8px;
-        background: var(--ink);
-        color: #fff;
-        font-size: .82rem;
-        font-weight: 800;
-        transform: translateY(-150%);
-        transition: transform .18s ease;
-      }
-      .skip-link:focus { transform: translateY(0); }
-      :focus-visible { outline: 3px solid #e2ac5a; outline-offset: 4px; }
-
-      /* Opening loader */
-      .site-loader {
-        position: fixed;
-        z-index: 90;
-        inset: 0;
-        display: grid;
-        place-items: center;
-        overflow: hidden;
-        background: radial-gradient(circle at 50% 43%, #f6fbfa 0, #fbfaf7 43%, #f2f5f3 100%);
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity .42s ease, visibility .42s ease;
-        visibility: hidden;
-      }
-      .is-loading .site-loader { opacity: 1; pointer-events: none; visibility: visible; }
-      .site-loader.is-complete { opacity: 0; pointer-events: none; visibility: hidden; }
-      .loader-content { width: min(300px, calc(100vw - 48px)); text-align: center; }
-      .loader-brand { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 22px; color: var(--ink); font-size: .64rem; font-weight: 800; letter-spacing: .12em; }
-      .loader-brand-mark { display: grid; width: 25px; height: 25px; place-items: center; border-radius: 9px; background: var(--ink); color: #fff; font-size: 1.15rem; font-weight: 500; line-height: 1; }
-      .pulse-loader-visual { position: relative; width: 278px; height: 117px; margin: 0 auto; }
-      .pulse-loader-visual::before { position: absolute; top: 21px; right: 10px; left: 10px; height: 74px; border-radius: 42px; background: linear-gradient(100deg, rgba(226,241,238,0), #e5f1ef 47%, rgba(226,241,238,0)); content: ""; }
-      .pulse-loader-svg { position: relative; z-index: 1; display: block; width: 100%; height: 100%; overflow: visible; }
-      .pulse-route-back { fill: none; stroke: #dce9e7; stroke-linecap: round; stroke-linejoin: round; stroke-width: 3; }
-      .pulse-route { fill: none; stroke: url(#loader-route-gradient); stroke-dasharray: 340; stroke-dashoffset: 340; stroke-linecap: round; stroke-linejoin: round; stroke-width: 3.4; animation: trace-care-route 1.02s .09s cubic-bezier(.22,.74,.25,1) both; }
-      .pulse-start { fill: var(--teal); opacity: 0; animation: reveal-route-start .22s .06s ease-out both; }
-      .pulse-end { fill: var(--teal); opacity: 0; animation: reveal-route-end .24s .84s ease-out both; }
-      .pulse-pin-ring { position: absolute; z-index: 0; top: 38px; right: 22px; width: 48px; height: 48px; border: 1px solid rgba(40,127,121,.27); border-radius: 50%; opacity: 0; transform: scale(.5); animation: pin-halo .58s .83s cubic-bezier(.2,.75,.25,1) both; }
-      .pulse-pin { position: absolute; z-index: 2; top: 39px; right: 29px; display: grid; width: 34px; height: 34px; place-items: center; border-radius: 50% 50% 50% 7px; background: var(--ink); box-shadow: 0 8px 15px rgba(13,41,70,.17); color: #fff; opacity: 0; transform: rotate(-45deg) scale(.7); animation: pulse-pin-arrive .43s .79s cubic-bezier(.18,.87,.27,1.18) forwards; }
-      .pulse-pin span { font-size: 1.15rem; font-weight: 500; line-height: 1; transform: rotate(45deg); }
-      .pulse-place { position: absolute; z-index: 2; top: 87px; right: 0; color: var(--muted); font-size: .6rem; font-weight: 800; letter-spacing: .09em; opacity: 0; text-transform: uppercase; animation: reveal-route-end .26s 1.04s ease-out both; }
-      .pulse-loader-status { margin: 16px 0 0; color: var(--muted); font-size: .68rem; font-weight: 700; letter-spacing: .02em; }
-
-      @keyframes trace-care-route { to { stroke-dashoffset: 0; } }
-      @keyframes reveal-route-start { to { opacity: 1; } }
-      @keyframes reveal-route-end { from { opacity: 0; transform: translateY(3px); } to { opacity: 1; transform: translateY(0); } }
-      @keyframes pulse-pin-arrive { 0% { opacity: 0; transform: rotate(-45deg) scale(.55); } 72% { opacity: 1; transform: rotate(-45deg) scale(1.08); } 100% { opacity: 1; transform: rotate(-45deg) scale(1); } }
-      @keyframes pin-halo { 0% { opacity: 0; transform: scale(.5); } 45% { opacity: 1; } 100% { opacity: 0; transform: scale(1.5); } }
-
-      /* Header */
-      .site-header {
-        position: sticky;
-        z-index: 20;
-        top: 0;
-        border-bottom: 1px solid transparent;
-        background: rgba(251, 250, 247, 0.82);
-        backdrop-filter: blur(15px);
-        transition: background .2s ease, border-color .2s ease, box-shadow .2s ease;
-      }
-      .site-header.is-scrolled {
-        border-color: rgba(220, 229, 230, .86);
-        background: rgba(255,255,255,.91);
-        box-shadow: 0 8px 22px rgba(13,41,70,.05);
-      }
-      .header-inner { display: flex; align-items: center; justify-content: space-between; min-height: 78px; gap: 26px; }
-      .brand { display: inline-flex; align-items: center; gap: 11px; flex: 0 0 auto; }
-      .brand-mark { display: grid; width: 38px; height: 38px; place-items: center; border-radius: 12px; background: var(--ink); color: #fff; box-shadow: inset 0 -3px 0 rgba(255,255,255,.1); }
-      .brand-mark svg { width: 21px; height: 21px; }
-      .brand-copy { display: grid; gap: 3px; }
-      .brand-name { font-size: .92rem; font-weight: 800; letter-spacing: .115em; line-height: 1; }
-      .brand-place { color: var(--muted); font-size: .64rem; font-weight: 700; letter-spacing: .105em; line-height: 1; text-transform: uppercase; }
-      .header-links { display: flex; align-items: center; gap: 24px; margin-left: auto; }
-      .header-links a:not(.header-call) { color: #50647a; font-size: .79rem; font-weight: 700; transition: color .18s ease; }
-      .header-links a:not(.header-call):hover { color: var(--teal); }
-      .header-call, .button {
-        display: inline-flex;
-        min-height: 45px;
-        align-items: center;
-        justify-content: center;
-        gap: 9px;
-        border: 1px solid transparent;
-        border-radius: 10px;
-        font: inherit;
-        font-size: .8rem;
-        font-weight: 800;
-        letter-spacing: -.01em;
-        transition: transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
-      }
-      .header-call { padding: 0 16px; background: var(--ink); color: #fff; }
-      .header-call:hover, .button-primary:hover { box-shadow: 0 10px 21px rgba(13,41,70,.17); transform: translateY(-2px); }
-      .header-call svg, .button svg { width: 17px; height: 17px; flex: 0 0 auto; }
-
-      /* Hero */
-      .hero { position: relative; padding: 71px 0 68px; }
-      .hero::before {
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        right: -14vw;
-        width: min(50vw, 710px);
-        height: min(48vw, 610px);
-        border-radius: 58% 42% 38% 62%;
-        background: linear-gradient(137deg, #e7f2f0, #eff3f1 56%, #f8f5ef);
-        content: "";
-      }
-      .hero-grid { display: grid; grid-template-columns: minmax(0, .98fr) minmax(400px, .92fr); align-items: center; gap: clamp(46px, 7vw, 94px); }
-      .hero-copy { padding: 5px 0 0; }
-      .eyebrow { display: inline-flex; align-items: center; gap: 9px; margin-bottom: 20px; color: var(--teal); font-size: .74rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
-      .eyebrow::before { width: 27px; height: 1px; background: currentColor; content: ""; }
-      h1, h2, h3 { margin: 0; font-family: "DM Serif Display", Georgia, serif; font-weight: 400; }
-      h1 { max-width: 630px; font-size: clamp(3.65rem, 6.25vw, 5.8rem); letter-spacing: -.06em; line-height: .93; }
-      h1 em { color: var(--teal); font-style: italic; }
-      .hero-description { max-width: 505px; margin: 25px 0 28px; color: var(--muted); font-size: 1rem; font-weight: 500; line-height: 1.76; }
-      .hero-details { display: grid; grid-template-columns: auto 1fr; gap: 8px 13px; max-width: 505px; margin-bottom: 28px; padding: 15px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-      .hero-details svg { grid-row: span 2; width: 20px; height: 20px; margin-top: 2px; color: var(--teal); }
-      .hero-details strong { font-size: .83rem; font-weight: 800; }
-      .hero-details span { color: var(--muted); font-size: .78rem; font-weight: 600; line-height: 1.48; }
-      .hero-actions { display: flex; flex-wrap: wrap; gap: 11px; }
-      .button { min-height: 49px; padding: 0 18px; cursor: pointer; }
-      .button-primary { background: var(--teal); color: #fff; }
-      .button-primary:hover { background: var(--teal-dark); }
-      .button-secondary { border-color: #cbd7d9; background: rgba(255,255,255,.63); color: var(--ink); }
-      .button-secondary:hover { border-color: var(--teal); background: #fff; transform: translateY(-2px); }
-      .hero-media { position: relative; min-height: 510px; }
-      .media-frame { position: absolute; inset: 0 0 27px 24px; overflow: hidden; border: 8px solid rgba(255,255,255,.95); border-radius: 24px; background: #dce6e4; box-shadow: var(--shadow); }
-      .media-frame img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 57% center; transition: transform .7s cubic-bezier(.2,.65,.2,1); }
-      .hero-media:hover .media-frame img { transform: scale(1.025); }
-      .media-label { position: absolute; z-index: 2; top: 24px; left: 24px; display: inline-flex; align-items: center; gap: 8px; padding: 9px 11px; border: 1px solid rgba(255,255,255,.7); border-radius: 8px; background: rgba(255,255,255,.88); color: var(--ink); font-size: .7rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; backdrop-filter: blur(8px); }
-      .media-label::before { width: 7px; height: 7px; border-radius: 50%; background: var(--teal); content: ""; }
-      .location-card { position: absolute; z-index: 4; bottom: 0; left: 0; display: flex; align-items: center; gap: 11px; max-width: 240px; padding: 12px 14px; border: 1px solid #e5ecea; border-radius: 12px; background: #fff; box-shadow: 0 16px 35px rgba(13,41,70,.14); }
-      .location-card-icon { display: grid; flex: 0 0 34px; width: 34px; height: 34px; place-items: center; border-radius: 9px; background: var(--teal-pale); color: var(--teal); }
-      .location-card-icon svg { width: 18px; height: 18px; }
-      .location-card strong { display: block; font-size: .73rem; font-weight: 800; }
-      .location-card span { display: block; margin-top: 3px; color: var(--muted); font-size: .66rem; font-weight: 600; line-height: 1.35; }
-
-      /* Essentials */
-      .essentials { position: relative; padding: 0 0 94px; }
-      .essentials-grid { display: grid; grid-template-columns: 1.12fr 1fr 1fr; border: 1px solid var(--line); border-radius: 15px; background: #fff; box-shadow: var(--soft-shadow); }
-      .essential { display: flex; min-height: 108px; align-items: center; gap: 15px; padding: 22px 25px; border-right: 1px solid var(--line); }
-      .essential:last-child { border-right: 0; }
-      .essential-icon { display: grid; flex: 0 0 42px; width: 42px; height: 42px; place-items: center; border-radius: 11px; background: var(--mist); color: var(--teal); }
-      .essential:nth-child(2) .essential-icon { background: #f6f0e6; color: #a47736; }
-      .essential:nth-child(3) .essential-icon { background: #edf3f8; color: #527496; }
-      .essential-icon svg { width: 20px; height: 20px; }
-      .essential strong { display: block; font-size: .79rem; font-weight: 800; }
-      .essential span { display: block; margin-top: 4px; color: var(--muted); font-size: .73rem; font-weight: 600; line-height: 1.45; }
-
-      /* Shared sections */
-      .section { padding: 106px 0; }
-      .section-muted { background: var(--stone); }
-      .section-header { max-width: 640px; margin-bottom: 48px; }
-      .section-kicker { display: flex; align-items: center; gap: 9px; margin-bottom: 15px; color: var(--teal); font-size: .72rem; font-weight: 800; letter-spacing: .115em; text-transform: uppercase; }
-      .section-kicker::before { width: 24px; height: 1px; background: currentColor; content: ""; }
-      h2 { font-size: clamp(2.65rem, 4.7vw, 4.25rem); letter-spacing: -.056em; line-height: .98; }
-      .section-header p { max-width: 555px; margin: 19px 0 0; color: var(--muted); font-size: .96rem; font-weight: 500; line-height: 1.75; }
-
-      /* Find us */
-      .visit-layout { display: grid; grid-template-columns: minmax(330px, .95fr) minmax(0, 1.05fr); align-items: center; gap: clamp(40px, 8vw, 110px); }
-      .map-card { position: relative; min-height: 424px; overflow: hidden; border-radius: 22px; background: #dfe8e7; box-shadow: var(--shadow); }
-      .map-card::before { position: absolute; inset: 0; background-image: linear-gradient(90deg, rgba(255,255,255,.47) 1px, transparent 1px), linear-gradient(rgba(255,255,255,.47) 1px, transparent 1px); background-size: 39px 39px; content: ""; }
-      .map-park { position: absolute; width: 265px; height: 220px; border: 25px solid #c5d9c7; border-radius: 55% 45% 52% 48%; opacity: .82; transform: rotate(25deg); }
-      .map-park.one { top: -117px; left: -80px; } .map-park.two { right: -122px; bottom: -108px; }
-      .road { position: absolute; height: 28px; border: 8px solid rgba(255,255,255,.85); border-radius: 99px; background: #c8d6d7; box-shadow: 0 1px 0 rgba(13,41,70,.08); }
-      .road-a { top: 86px; left: -43px; width: 380px; transform: rotate(26deg); }
-      .road-b { right: -76px; bottom: 91px; width: 422px; transform: rotate(-28deg); }
-      .road-c { top: 215px; left: 17px; width: 410px; transform: rotate(-8deg); }
-      .route-svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
-      .route-line { fill: none; stroke: var(--teal); stroke-width: 3; stroke-linecap: round; stroke-dasharray: 7 8; stroke-dashoffset: 340; transition: stroke-dashoffset 1.1s ease-out; }
-      .is-visible .route-line { stroke-dashoffset: 0; }
-      .map-point { position: absolute; z-index: 2; display: grid; width: 54px; height: 54px; place-items: center; border: 8px solid rgba(255,255,255,.92); border-radius: 50% 50% 50% 6px; background: var(--ink); color: #fff; box-shadow: 0 10px 19px rgba(13,41,70,.19); transform: rotate(-45deg); }
-      .map-point svg { width: 18px; height: 18px; transform: rotate(45deg); }
-      .map-point.from { top: 111px; left: 81px; background: #fff; color: var(--teal); }
-      .map-point.to { right: 77px; bottom: 104px; }
-      .map-label { position: absolute; z-index: 3; padding: 8px 10px; border-radius: 7px; background: rgba(255,255,255,.93); color: var(--ink); box-shadow: 0 6px 14px rgba(13,41,70,.08); font-size: .66rem; font-weight: 800; }
-      .map-label.from { top: 153px; left: 126px; } .map-label.to { right: 26px; bottom: 59px; }
-      .visit-copy h2 { max-width: 490px; }
-      .visit-copy > p { max-width: 490px; margin: 21px 0 25px; color: var(--muted); font-size: .95rem; font-weight: 500; line-height: 1.74; }
-      .address-block { display: grid; grid-template-columns: 45px 1fr; gap: 15px; padding: 17px; border: 1px solid var(--line); border-radius: 13px; background: #fff; }
-      .address-icon { display: grid; width: 45px; height: 45px; place-items: center; border-radius: 11px; background: var(--teal-pale); color: var(--teal); }
-      .address-icon svg { width: 21px; height: 21px; }
-      .address-block strong { display: block; font-size: .8rem; font-weight: 800; }
-      .address-block span { display: block; margin-top: 4px; color: var(--muted); font-size: .77rem; font-weight: 600; line-height: 1.48; }
-      .visit-actions { display: flex; flex-wrap: wrap; gap: 11px; margin-top: 25px; }
-
-      /* Hours */
-      .hours-layout { display: grid; grid-template-columns: .8fr 1.2fr; align-items: end; gap: 80px; }
-      .hours-intro { padding-bottom: 9px; }
-      .hours-intro p { max-width: 350px; margin: 18px 0 0; color: var(--muted); font-size: .93rem; font-weight: 500; line-height: 1.72; }
-      .hours-table { overflow: hidden; border-radius: 18px; background: #fff; box-shadow: var(--soft-shadow); }
-      .hours-table-header { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 17px 22px; background: var(--ink); color: #fff; }
-      .hours-table-header strong { font-size: .78rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; }
-      .hours-table-header span { color: #bed0dd; font-size: .71rem; font-weight: 700; }
-      .hour-row { display: grid; grid-template-columns: 1fr auto; gap: 24px; padding: 22px; border-bottom: 1px solid var(--line); }
-      .hour-row:last-child { border: 0; }
-      .hour-row span { font-size: .86rem; font-weight: 700; }
-      .hour-row strong { color: var(--teal); font-size: .88rem; font-weight: 800; text-align: right; }
-      .hours-footnote { display: flex; align-items: flex-start; gap: 9px; padding: 15px 22px; background: #f7f9f8; color: var(--muted); font-size: .71rem; font-weight: 600; line-height: 1.5; }
-      .hours-footnote svg { flex: 0 0 auto; width: 15px; height: 15px; margin-top: 1px; color: var(--teal); }
-
-      /* Before you visit */
-      .plan-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-      .plan-card { position: relative; min-height: 203px; padding: 25px; border: 1px solid var(--line); border-radius: 15px; background: #fff; transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease; }
-      .plan-card:hover { border-color: #c2d5d2; box-shadow: 0 16px 28px rgba(13,41,70,.07); transform: translateY(-4px); }
-      .step-number { color: #8aa7a5; font-size: .71rem; font-weight: 800; letter-spacing: .1em; }
-      .plan-card h3 { margin: 24px 0 9px; font-family: "Manrope", Arial, sans-serif; font-size: 1.02rem; font-weight: 800; letter-spacing: -.035em; }
-      .plan-card p { max-width: 260px; margin: 0; color: var(--muted); font-size: .81rem; font-weight: 500; line-height: 1.63; }
-      .plan-mark { position: absolute; right: 22px; bottom: 22px; display: grid; width: 36px; height: 36px; place-items: center; border-radius: 50%; background: var(--mist); color: var(--teal); }
-      .plan-mark svg { width: 18px; height: 18px; }
-
-      /* Contact */
-      .contact-section { padding: 0 0 106px; }
-      .contact-panel { position: relative; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 50px; overflow: hidden; padding: 55px 61px; border-radius: 22px; background: var(--ink); color: #fff; }
-      .contact-panel::before { position: absolute; top: -126px; right: -73px; width: 354px; height: 354px; border: 1px solid rgba(255,255,255,.14); border-radius: 50%; box-shadow: 0 0 0 32px rgba(255,255,255,.035), 0 0 0 65px rgba(255,255,255,.025); content: ""; }
-      .contact-content { position: relative; z-index: 1; }
-      .contact-content .section-kicker { color: #8cd1c7; }
-      .contact-content h2 { max-width: 550px; font-size: clamp(2.5rem, 4vw, 3.75rem); }
-      .contact-content p { max-width: 485px; margin: 17px 0 0; color: #bbccda; font-size: .9rem; font-weight: 500; line-height: 1.72; }
-      .contact-actions { position: relative; z-index: 1; display: grid; min-width: 240px; gap: 10px; }
-      .contact-call { display: grid; gap: 4px; padding: 17px 19px; border-radius: 12px; background: #fff; color: var(--ink); transition: transform .2s ease; }
-      .contact-call:hover { transform: translateY(-3px); }
-      .contact-call small { color: var(--muted); font-size: .66rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
-      .contact-call strong { font-size: 1.12rem; font-weight: 800; letter-spacing: -.035em; }
-      .contact-map { display: inline-flex; justify-content: center; padding: 12px; border: 1px solid rgba(255,255,255,.25); border-radius: 10px; color: #fff; font-size: .77rem; font-weight: 800; transition: background .2s ease, transform .2s ease; }
-      .contact-map:hover { background: rgba(255,255,255,.1); transform: translateY(-2px); }
-
-      /* Footer */
-      footer { border-top: 1px solid var(--line); background: #fff; }
-      .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 84px; color: var(--muted); font-size: .72rem; font-weight: 600; }
-      .footer-brand { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); font-size: .73rem; font-weight: 800; letter-spacing: .08em; }
-      .footer-brand-mark { display: grid; width: 24px; height: 24px; place-items: center; border-radius: 7px; background: var(--ink); color: #fff; font-size: 1rem; line-height: 1; }
-      footer a { color: var(--ink); font-weight: 800; text-decoration: underline; text-decoration-color: #b3c4c8; text-underline-offset: 3px; }
-
-      .mobile-actions { display: none; }
-
-      /* Reveals */
-      .reveal { opacity: 0; transform: translateY(18px); transition: opacity .66s ease, transform .66s cubic-bezier(.2,.66,.25,1); }
-      .reveal.is-visible { opacity: 1; transform: translateY(0); }
-      .hero-copy .reveal:nth-child(2) { transition-delay: .07s; }
-      .hero-copy .reveal:nth-child(3) { transition-delay: .13s; }
-      .hero-copy .reveal:nth-child(4) { transition-delay: .19s; }
-      .hero-copy .reveal:nth-child(5) { transition-delay: .24s; }
-      .hero-media.reveal { transition-delay: .13s; }
-      .plan-card:nth-child(2) { transition-delay: .07s; }
-      .plan-card:nth-child(3) { transition-delay: .13s; }
-
-      @media (prefers-reduced-motion: reduce) {
-        html { scroll-behavior: auto; }
-        *, *::before, *::after { transition-duration: .001ms !important; animation-duration: .001ms !important; animation-iteration-count: 1 !important; }
-        .site-loader { display: none !important; }
-        .reveal { opacity: 1; transform: none; }
-        .route-line { stroke-dashoffset: 0; }
-      }
-
-      @media (max-width: 900px) {
-        .header-links a:not(.header-call) { display: none; }
-        .hero { padding-top: 49px; }
-        .hero-grid { grid-template-columns: 1fr; gap: 47px; }
-        .hero-media { width: min(100%, 580px); min-height: 480px; margin: 0 auto; }
-        .essentials-grid { grid-template-columns: 1fr; }
-        .essential { min-height: 85px; border-right: 0; border-bottom: 1px solid var(--line); }
-        .essential:last-child { border-bottom: 0; }
-        .visit-layout, .hours-layout { grid-template-columns: 1fr; gap: 48px; }
-        .map-card { max-width: 600px; }
-        .hours-intro { padding-bottom: 0; }
-        .plan-grid { grid-template-columns: 1fr; }
-        .plan-card { min-height: 167px; }
-        .contact-panel { grid-template-columns: 1fr; gap: 28px; }
-        .contact-actions { width: min(100%, 320px); }
-      }
-
-      @media (max-width: 600px) {
-        body { padding-bottom: 75px; }
-        .container { width: min(100% - 32px, 1160px); }
-        .header-inner { min-height: 67px; }
-        .brand-mark { width: 35px; height: 35px; border-radius: 10px; }
-        .brand-name { font-size: .82rem; }
-        .brand-place { font-size: .57rem; }
-        .header-call { min-height: 38px; padding: 0 12px; border-radius: 8px; font-size: .72rem; }
-        .header-call span { display: none; }
-        .hero { padding: 43px 0 50px; }
-        .hero::before { top: 247px; right: -185px; width: 405px; height: 405px; }
-        h1 { font-size: clamp(3.3rem, 15.5vw, 4.55rem); }
-        .hero-description { margin-top: 19px; font-size: .92rem; line-height: 1.73; }
-        .hero-details { margin-bottom: 23px; }
-        .hero-actions { display: grid; grid-template-columns: 1fr; }
-        .button { width: 100%; }
-        .hero-media { min-height: 394px; }
-        .media-frame { inset: 0 0 24px 12px; border-width: 6px; border-radius: 18px; }
-        .media-frame img { object-position: 57% center; }
-        .media-label { top: 14px; left: 14px; padding: 8px 9px; font-size: .61rem; }
-        .location-card { left: 0; max-width: 220px; padding: 10px; }
-        .essentials { padding-bottom: 70px; }
-        .essential { padding: 18px; }
-        .section { padding: 76px 0; }
-        .section-header { margin-bottom: 34px; }
-        h2 { font-size: clamp(2.45rem, 11.8vw, 3.2rem); }
-        .section-header p { margin-top: 15px; font-size: .9rem; }
-        .map-card { min-height: 348px; border-radius: 17px; }
-        .map-point.from { top: 76px; left: 49px; } .map-point.to { right: 51px; bottom: 72px; }
-        .map-label.from { top: 117px; left: 91px; } .map-label.to { right: 14px; bottom: 29px; }
-        .road-a { top: 57px; } .road-b { bottom: 61px; } .road-c { top: 179px; }
-        .visit-layout, .hours-layout { gap: 36px; }
-        .hour-row { padding: 19px 17px; gap: 10px; }
-        .hour-row span, .hour-row strong { font-size: .76rem; }
-        .hours-table-header, .hours-footnote { padding-left: 17px; padding-right: 17px; }
-        .plan-card { padding: 22px; }
-        .contact-section { padding-bottom: 76px; }
-        .contact-panel { padding: 34px 24px; border-radius: 17px; }
-        .contact-content h2 { font-size: 2.55rem; }
-        .footer-inner { align-items: flex-start; flex-direction: column; justify-content: center; min-height: 110px; gap: 9px; }
-        .mobile-actions { position: fixed; z-index: 30; right: 0; bottom: 0; left: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1px; padding: 8px 12px calc(8px + env(safe-area-inset-bottom)); border-top: 1px solid #d6e0df; background: rgba(255,255,255,.94); box-shadow: 0 -9px 25px rgba(13,41,70,.07); backdrop-filter: blur(12px); }
-        .mobile-actions a { display: flex; min-height: 45px; align-items: center; justify-content: center; gap: 7px; border-radius: 8px; color: var(--ink); font-size: .72rem; font-weight: 800; }
-        .mobile-actions a:first-child { background: var(--teal); color: #fff; }
-        .mobile-actions a:last-child { background: var(--mist); }
-        .mobile-actions svg { width: 16px; height: 16px; }
-      }
-    </style>
   </head>
-  <body>
+  <body data-page="home">
     <div class="site-loader" id="site-loader" aria-hidden="true">
       <div class="loader-content">
         <div class="loader-brand"><span class="loader-brand-mark">+</span> AADHAR HOSPITAL</div>
@@ -409,251 +50,151 @@
           <svg class="pulse-loader-svg" viewBox="0 0 280 117" aria-hidden="true">
             <defs>
               <linearGradient id="loader-route-gradient" x1="18" y1="0" x2="231" y2="0" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#287f79"/>
-                <stop offset=".63" stop-color="#287f79"/>
-                <stop offset="1" stop-color="#0d2946"/>
+                <stop stop-color="#287f79"/><stop offset=".63" stop-color="#287f79"/><stop offset="1" stop-color="#0d2946"/>
               </linearGradient>
             </defs>
             <path class="pulse-route-back" d="M18 61h27l9-24 10 48 10-31 10 7h47c18 0 25 13 37 20 15 8 30 7 42-7l20-20"/>
             <path class="pulse-route" d="M18 61h27l9-24 10 48 10-31 10 7h47c18 0 25 13 37 20 15 8 30 7 42-7l20-20"/>
-            <circle class="pulse-start" cx="18" cy="61" r="4"/>
-            <circle class="pulse-end" cx="230" cy="54" r="3.5"/>
+            <circle class="pulse-start" cx="18" cy="61" r="4"/><circle class="pulse-end" cx="230" cy="54" r="3.5"/>
           </svg>
-          <span class="pulse-pin"><span>+</span></span>
-          <span class="pulse-place">Tasgaon</span>
+          <span class="pulse-pin"><span>+</span></span><span class="pulse-place">Tasgaon</span>
         </div>
         <p class="pulse-loader-status">Preparing your visit</p>
       </div>
     </div>
+
     <a class="skip-link" href="#main-content">Skip to content</a>
-    <div class="page">
-      <header class="site-header" id="site-header">
-        <div class="container header-inner">
-          <a class="brand" href="#top" aria-label="Aadhar Hospital home">
-            <span class="brand-mark" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M12 5.5v13M5.5 12h13" stroke="currentColor" stroke-width="2.7" stroke-linecap="round"/></svg>
-            </span>
-            <span class="brand-copy">
-              <span class="brand-name">AADHAR HOSPITAL</span>
-              <span class="brand-place">Tasgaon</span>
-            </span>
-          </a>
-          <nav class="header-links" aria-label="Primary navigation">
-            <a href="#visit">Location &amp; hours</a>
-            <a href="#contact">Contact</a>
-            <a class="header-call" href="tel:+917028423600">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5.2 4.9c.4-.9 1.4-1.4 2.3-1.1l2.1.7c.8.3 1.3 1.1 1.2 1.9l-.2 2.1c0 .6-.5 1.1-1 1.3l-1.4.6a15.1 15.1 0 0 0 5.4 5.4l.6-1.4c.2-.5.7-.9 1.3-1l2.1-.2c.8-.1 1.6.4 1.9 1.2l.7 2.1c.3.9-.2 1.9-1.1 2.3l-1 .4c-1.1.4-2.3.5-3.4.1A20.5 20.5 0 0 1 4.7 8.3c-.4-1.1-.3-2.3.1-3.4l.4-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
-              <span>Call 0123456789</span>
-            </a>
-          </nav>
+    <header class="site-header" id="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Aadhar Hospital home">
+          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5.5v13M5.5 12h13" stroke="currentColor" stroke-width="2.7" stroke-linecap="round"/></svg></span>
+          <span class="brand-copy"><span class="brand-name">AADHAR HOSPITAL</span><span class="brand-place">Tasgaon</span></span>
+        </a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span></button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+          <a class="nav-link" href="index.html" aria-current="page">Home</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="plan-your-visit.html">Plan visit</a>
+          <a class="nav-link" href="location.html">Location</a>
+          <a class="nav-link" href="hours.html">Hours</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+          <a class="nav-call" href="tel:+917028423600"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5.2 4.9c.4-.9 1.4-1.4 2.3-1.1l2.1.7c.8.3 1.3 1.1 1.2 1.9l-.2 2.1c0 .6-.5 1.1-1 1.3l-1.4.6a15.1 15.1 0 0 0 5.4 5.4l.6-1.4c.2-.5.7-.9 1.3-1l2.1-.2c.8-.1 1.6.4 1.9 1.2l.7 2.1c.3.9-.2 1.9-1.1 2.3l-1 .4c-1.1.4-2.3.5-3.4.1A20.5 20.5 0 0 1 4.7 8.3c-.4-1.1-.3-2.3.1-3.4l.4-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>Call us</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="home-hero">
+        <div class="container home-grid">
+          <div class="home-copy" data-reveal>
+            <div class="eyebrow">Aadhar Hospital · Tasgaon</div>
+            <h1>Medical care, <em>close</em> to home.</h1>
+            <p class="body-copy">Aadhar Hospital is located on Sangli–Vita Road in Somwar Peth, Tasgaon. Find our published hours, call us, or get directions before you visit.</p>
+            <div class="hero-details">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19.3 9.7c0 5-7.3 9.6-7.3 9.6S4.7 14.7 4.7 9.7a7.3 7.3 0 1 1 14.6 0Z" stroke="currentColor" stroke-width="1.9"/><circle cx="12" cy="9.7" r="2.6" stroke="currentColor" stroke-width="1.9"/></svg>
+              <strong>Somwar Peth, Tasgaon</strong>
+              <span>Sangli – Vita Road · Monday to Saturday: 10:00 AM – 9:30 PM</span>
+            </div>
+            <div class="button-row">
+              <a class="button button-primary" href="tel:+917028423600"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5.2 4.9c.4-.9 1.4-1.4 2.3-1.1l2.1.7c.8.3 1.3 1.1 1.2 1.9l-.2 2.1c0 .6-.5 1.1-1 1.3l-1.4.6a15.1 15.1 0 0 0 5.4 5.4l.6-1.4c.2-.5.7-.9 1.3-1l2.1-.2c.8-.1 1.6.4 1.9 1.2l.7 2.1c.3.9-.2 1.9-1.1 2.3l-1 .4c-1.1.4-2.3.5-3.4.1A20.5 20.5 0 0 1 4.7 8.3c-.4-1.1-.3-2.3.1-3.4l.4-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>Call the hospital</a>
+              <a class="button button-secondary" href="https://maps.app.goo.gl/6AW8SyGjEPgjFMwa7" target="_blank" rel="noopener noreferrer">Get directions <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+          </div>
+          <div class="hero-media" data-reveal data-delay="1" role="img" aria-label="Doctor in a bright hospital consultation space">
+            <div class="hero-image-frame">
+              <img src="assets/aadhar-hospital-hero.png" alt="Doctor standing in a bright hospital consultation space" loading="eager" fetchpriority="high" />
+              <span class="image-label">Local care · Tasgaon</span>
+            </div>
+            <div class="hero-floating-card">
+              <span class="hero-floating-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M19 9.8c0 4.8-7 9.2-7 9.2s-7-4.4-7-9.2a7 7 0 1 1 14 0Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9.8" r="2.2" fill="currentColor"/></svg></span>
+              <span><strong>Plan your route</strong><span>Sangli – Vita Road, Somwar Peth</span></span>
+            </div>
+          </div>
         </div>
-      </header>
+      </section>
 
-      <main id="main-content">
-        <section class="hero" id="top">
-          <div class="container hero-grid">
-            <div class="hero-copy">
-              <div class="eyebrow reveal is-visible">Aadhar Hospital · Tasgaon</div>
-              <h1 class="reveal is-visible">Medical care, <em>close</em> to home.</h1>
-              <p class="hero-description reveal is-visible">Aadhar Hospital is located on Sangli–Vita Road in Somwar Peth, Tasgaon. Find our published hours, call us, or get directions before you visit.</p>
-              <div class="hero-details reveal is-visible">
-                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19.3 9.7c0 5-7.3 9.6-7.3 9.6S4.7 14.7 4.7 9.7a7.3 7.3 0 1 1 14.6 0Z" stroke="currentColor" stroke-width="1.9"/><circle cx="12" cy="9.7" r="2.6" stroke="currentColor" stroke-width="1.9"/></svg>
-                <strong>Somwar Peth, Tasgaon</strong>
-                <span>Sangli – Vita Road · Monday to Saturday: 10:00 AM – 9:30 PM</span>
-              </div>
-              <div class="hero-actions reveal is-visible">
-                <a class="button button-primary" href="tel:+917028423600">
-                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5.2 4.9c.4-.9 1.4-1.4 2.3-1.1l2.1.7c.8.3 1.3 1.1 1.2 1.9l-.2 2.1c0 .6-.5 1.1-1 1.3l-1.4.6a15.1 15.1 0 0 0 5.4 5.4l.6-1.4c.2-.5.7-.9 1.3-1l2.1-.2c.8-.1 1.6.4 1.9 1.2l.7 2.1c.3.9-.2 1.9-1.1 2.3l-1 .4c-1.1.4-2.3.5-3.4.1A20.5 20.5 0 0 1 4.7 8.3c-.4-1.1-.3-2.3.1-3.4l.4-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
-                  Call the hospital
-                </a>
-                <a class="button button-secondary" href="https://maps.app.goo.gl/6AW8SyGjEPgjFMwa7" target="_blank" rel="noopener noreferrer">
-                  Get directions
-                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </a>
-              </div>
-            </div>
-
-            <div class="hero-media reveal is-visible" role="img" aria-label="A doctor in a bright hospital consultation space">
-              <div class="media-frame">
-                <img src="assets/aadhar-hospital-hero.png" alt="Doctor standing in a bright hospital consultation space" />
-                <div class="media-label">Local care · Tasgaon</div>
-              </div>
-              <div class="location-card">
-                <span class="location-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M19 9.8c0 4.8-7 9.2-7 9.2s-7-4.4-7-9.2a7 7 0 1 1 14 0Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9.8" r="2.2" fill="currentColor"/></svg></span>
-                <span><strong>Plan your route</strong><span>Sangli – Vita Road, Somwar Peth</span></span>
-              </div>
-            </div>
+      <section class="essentials" aria-label="Aadhar Hospital essentials">
+        <div class="container">
+          <div class="essentials-grid" data-reveal>
+            <a class="essential" href="location.html">
+              <span class="essential-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M19 9.8c0 4.8-7 9.2-7 9.2s-7-4.4-7-9.2a7 7 0 1 1 14 0Z" stroke="currentColor" stroke-width="1.9"/><circle cx="12" cy="9.8" r="2.2" stroke="currentColor" stroke-width="1.9"/></svg></span>
+              <span><strong>Location</strong><span>Sangli – Vita Road, Somwar Peth</span></span>
+            </a>
+            <a class="essential" href="hours.html">
+              <span class="essential-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="15" rx="3" stroke="currentColor" stroke-width="1.9"/><path d="M8 3v4M16 3v4M8 11h8M8 15h4" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg></span>
+              <span><strong>Monday – Saturday</strong><span>10:00 AM to 9:30 PM</span></span>
+            </a>
+            <a class="essential" href="hours.html">
+              <span class="essential-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.9"/></svg></span>
+              <span><strong>Sunday</strong><span>10:00 AM to 3:00 PM</span></span>
+            </a>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="essentials" aria-label="Aadhar Hospital essentials">
-          <div class="container">
-            <div class="essentials-grid reveal">
-              <a class="essential" href="https://maps.app.goo.gl/6AW8SyGjEPgjFMwa7" target="_blank" rel="noopener noreferrer">
-                <span class="essential-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M19 9.8c0 4.8-7 9.2-7 9.2s-7-4.4-7-9.2a7 7 0 1 1 14 0Z" stroke="currentColor" stroke-width="1.9"/><circle cx="12" cy="9.8" r="2.2" stroke="currentColor" stroke-width="1.9"/></svg></span>
-                <span><strong>Location</strong><span>Sangli – Vita Road, Somwar Peth</span></span>
-              </a>
-              <div class="essential">
-                <span class="essential-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="15" rx="3" stroke="currentColor" stroke-width="1.9"/><path d="M8 3v4M16 3v4M8 11h8M8 15h4" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg></span>
-                <span><strong>Monday – Saturday</strong><span>10:00 AM to 9:30 PM</span></span>
-              </div>
-              <div class="essential">
-                <span class="essential-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.9"/></svg></span>
-                <span><strong>Sunday</strong><span>10:00 AM to 3:00 PM</span></span>
-              </div>
-            </div>
+      <section class="section section-muted">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <div class="section-kicker">Plan ahead</div>
+            <h2>The information you need, in one place.</h2>
+            <p class="body-copy">Explore the pages below for visit planning, location details, and the hospital’s published schedule.</p>
           </div>
-        </section>
+          <div class="link-card-grid">
+            <a class="link-card" href="plan-your-visit.html" data-reveal>
+              <span class="card-number">01 / PLAN</span>
+              <span><h3>Plan your visit</h3><p>Three straightforward steps before you set out.</p><span class="link-arrow" aria-hidden="true">→</span></span>
+            </a>
+            <a class="link-card" href="location.html" data-reveal data-delay="1">
+              <span class="card-number">02 / LOCATE</span>
+              <span><h3>Location &amp; directions</h3><p>Find Aadhar Hospital on Sangli – Vita Road.</p><span class="link-arrow" aria-hidden="true">→</span></span>
+            </a>
+            <a class="link-card" href="hours.html" data-reveal data-delay="2">
+              <span class="card-number">03 / HOURS</span>
+              <span><h3>Opening hours</h3><p>Review the published times before you come.</p><span class="link-arrow" aria-hidden="true">→</span></span>
+            </a>
+          </div>
+        </div>
+      </section>
 
-        <section class="section section-muted" id="visit">
-          <div class="container visit-layout">
-            <div class="map-card reveal" role="img" aria-label="Stylized directions graphic from Somwar Peth to Aadhar Hospital">
-              <div class="map-park one"></div><div class="map-park two"></div>
-              <div class="road road-a"></div><div class="road road-b"></div><div class="road road-c"></div>
-              <svg class="route-svg" viewBox="0 0 560 424" preserveAspectRatio="none" aria-hidden="true"><path class="route-line" d="M108 138 C 182 143, 175 228, 294 225 S 379 305, 457 303"/></svg>
-              <div class="map-point from" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" fill="currentColor"/></svg></div>
-              <div class="map-point to" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5.5v13M5.5 12h13" stroke="currentColor" stroke-width="2.9" stroke-linecap="round"/></svg></div>
-              <span class="map-label from">Somwar Peth</span><span class="map-label to">Aadhar Hospital</span>
-            </div>
-            <div class="visit-copy reveal">
-              <div class="section-kicker">Location</div>
-              <h2>Find Aadhar Hospital in Tasgaon.</h2>
-              <p>We are on Sangli–Vita Road in Somwar Peth. Use Google Maps for turn-by-turn directions, or call us if you would like to check something before leaving.</p>
-              <div class="address-block">
-                <span class="address-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M19 9.8c0 4.8-7 9.2-7 9.2s-7-4.4-7-9.2a7 7 0 1 1 14 0Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9.8" r="2.2" fill="currentColor"/></svg></span>
+      <section class="section">
+        <div class="container split-layout reverse">
+          <div class="route-card" data-reveal role="img" aria-label="Stylized directions graphic from Somwar Peth to Aadhar Hospital">
+            <span class="route-park one"></span><span class="route-park two"></span>
+            <span class="route-road one"></span><span class="route-road two"></span><span class="route-road three"></span>
+            <svg class="route-svg" viewBox="0 0 560 424" preserveAspectRatio="none" aria-hidden="true"><path class="route-line" d="M108 138 C 182 143, 175 228, 294 225 S 379 305, 457 303"/></svg>
+            <span class="route-point from" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" fill="currentColor"/></svg></span>
+            <span class="route-point to" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5.5v13M5.5 12h13" stroke="currentColor" stroke-width="2.9" stroke-linecap="round"/></svg></span>
+            <span class="route-label from">Somwar Peth</span><span class="route-label to">Aadhar Hospital</span>
+          </div>
+          <div class="intro-panel" data-reveal data-delay="1">
+            <div class="section-kicker">Find us</div>
+            <h2>Located in the heart of Tasgaon.</h2>
+            <p class="body-copy">Use the map to get turn-by-turn directions to Aadhar Hospital, or call if you would like to check something before leaving.</p>
+            <div class="info-list">
+              <div class="info-list-item">
+                <span class="small-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M19 9.8c0 4.8-7 9.2-7 9.2s-7-4.4-7-9.2a7 7 0 1 1 14 0Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9.8" r="2.2" fill="currentColor"/></svg></span>
                 <span><strong>Aadhar Hospital</strong><span>Sangli – Vita Road, Somwar Peth, Tasgaon</span></span>
               </div>
-              <div class="visit-actions">
-                <a class="button button-primary" href="https://maps.app.goo.gl/6AW8SyGjEPgjFMwa7" target="_blank" rel="noopener noreferrer">Open Google Maps <span aria-hidden="true">↗</span></a>
-                <a class="button button-secondary" href="tel:+917028423600">0123456789</a>
-              </div>
+            </div>
+            <div class="button-row" style="margin-top:24px">
+              <a class="button button-primary" href="location.html">View location</a>
+              <a class="button button-secondary" href="contact.html">Contact us</a>
             </div>
           </div>
-        </section>
-
-        <section class="section" aria-labelledby="hours-heading">
-          <div class="container hours-layout">
-            <div class="hours-intro reveal">
-              <div class="section-kicker">Visiting hours</div>
-              <h2 id="hours-heading">Know the timings before you come.</h2>
-              <p>These are the hospital’s published operating hours. Please call ahead if you need clarification about your visit.</p>
-            </div>
-            <div class="hours-table reveal" aria-label="Aadhar Hospital operating hours">
-              <div class="hours-table-header"><strong>Opening hours</strong><span>Published schedule</span></div>
-              <div class="hour-row"><span>Monday – Saturday</span><strong>10:00 AM – 9:30 PM</strong></div>
-              <div class="hour-row"><span>Sunday</span><strong>10:00 AM – 3:00 PM</strong></div>
-              <div class="hours-footnote"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2"/><path d="M12 10v5M12 7v.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Timings are shown for planning purposes. Call the hospital for any visit-related questions.</div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section section-muted" aria-labelledby="plan-heading">
-          <div class="container">
-            <div class="section-header reveal">
-              <div class="section-kicker">Before you visit</div>
-              <h2 id="plan-heading">Three simple ways to plan ahead.</h2>
-              <p>Clear information makes the trip easier. Keep the published timings and contact details handy before you set out.</p>
-            </div>
-            <div class="plan-grid">
-              <article class="plan-card reveal">
-                <span class="step-number">01 / CHECK</span>
-                <h3>Review the timings</h3>
-                <p>Check the schedule above to choose a suitable time for your visit.</p>
-                <span class="plan-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2"/></svg></span>
-              </article>
-              <article class="plan-card reveal">
-                <span class="step-number">02 / LOCATE</span>
-                <h3>Get directions</h3>
-                <p>Open the map link for the route to Sangli – Vita Road, Somwar Peth.</p>
-                <span class="plan-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M19 9.8c0 4.8-7 9.2-7 9.2s-7-4.4-7-9.2a7 7 0 1 1 14 0Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9.8" r="2.2" fill="currentColor"/></svg></span>
-              </article>
-              <article class="plan-card reveal">
-                <span class="step-number">03 / CALL</span>
-                <h3>Confirm what you need</h3>
-                <p>Call the hospital if you would like information before your visit.</p>
-                <span class="plan-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5.2 4.9c.4-.9 1.4-1.4 2.3-1.1l2.1.7c.8.3 1.3 1.1 1.2 1.9l-.2 2.1c0 .6-.5 1.1-1 1.3l-1.4.6a15.1 15.1 0 0 0 5.4 5.4l.6-1.4c.2-.5.7-.9 1.3-1l2.1-.2c.8-.1 1.6.4 1.9 1.2l.7 2.1c.3.9-.2 1.9-1.1 2.3l-1 .4c-1.1.4-2.3.5-3.4.1A20.5 20.5 0 0 1 4.7 8.3c-.4-1.1-.3-2.3.1-3.4l.4-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section class="contact-section" id="contact">
-          <div class="container">
-            <div class="contact-panel reveal">
-              <div class="contact-content">
-                <div class="section-kicker">Contact Aadhar Hospital</div>
-                <h2>Call to plan your visit.</h2>
-                <p>For help with directions, timings, or visit-related questions, please contact the hospital directly.</p>
-              </div>
-              <div class="contact-actions">
-                <a class="contact-call" href="tel:+917028423600"><small>Call Aadhar Hospital</small><strong>0123456789</strong></a>
-                <a class="contact-map" href="https://maps.app.goo.gl/6AW8SyGjEPgjFMwa7" target="_blank" rel="noopener noreferrer">Get directions in Google Maps <span aria-hidden="true">↗</span></a>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer>
-        <div class="container footer-inner">
-          <span class="footer-brand"><span class="footer-brand-mark">+</span> AADHAR HOSPITAL</span>
-          <span>Somwar Peth, Tasgaon · <a href="tel:+917028423600">0123456789</a> · <a href="https://maps.app.goo.gl/6AW8SyGjEPgjFMwa7" target="_blank" rel="noopener noreferrer">Directions</a></span>
         </div>
-      </footer>
-    </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span class="footer-brand"><span class="footer-brand-mark">+</span> AADHAR HOSPITAL</span>
+        <span>Somwar Peth, Tasgaon · <a href="tel:+917028423600">070284 23600</a> · <a href="https://maps.app.goo.gl/6AW8SyGjEPgjFMwa7" target="_blank" rel="noopener noreferrer">Directions</a></span>
+      </div>
+    </footer>
 
     <div class="mobile-actions" aria-label="Quick actions">
       <a href="tel:+917028423600"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5.2 4.9c.4-.9 1.4-1.4 2.3-1.1l2.1.7c.8.3 1.3 1.1 1.2 1.9l-.2 2.1c0 .6-.5 1.1-1 1.3l-1.4.6a15.1 15.1 0 0 0 5.4 5.4l.6-1.4c.2-.5.7-.9 1.3-1l2.1-.2c.8-.1 1.6.4 1.9 1.2l.7 2.1c.3.9-.2 1.9-1.1 2.3l-1 .4c-1.1.4-2.3.5-3.4.1A20.5 20.5 0 0 1 4.7 8.3c-.4-1.1-.3-2.3.1-3.4l.4-1Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>Call</a>
       <a href="https://maps.app.goo.gl/6AW8SyGjEPgjFMwa7" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 9.8c0 4.8-7 9.2-7 9.2s-7-4.4-7-9.2a7 7 0 1 1 14 0Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9.8" r="2.2" fill="currentColor"/></svg>Directions</a>
     </div>
-
-    <script>
-      const documentRoot = document.documentElement;
-      const loader = document.querySelector('#site-loader');
-      const loaderStartedAt = performance.now();
-      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      let loaderFinished = false;
-
-      const finishLoader = () => {
-        if (loaderFinished || !loader) return;
-        loaderFinished = true;
-        const minimumDuration = reducedMotion ? 0 : 1500;
-        const remainingTime = Math.max(0, minimumDuration - (performance.now() - loaderStartedAt));
-
-        window.setTimeout(() => {
-          loader.classList.add('is-complete');
-          documentRoot.classList.remove('is-loading');
-          window.setTimeout(() => loader.remove(), 460);
-        }, remainingTime);
-      };
-
-      if (reducedMotion) {
-        finishLoader();
-      } else {
-        window.addEventListener('load', finishLoader, { once: true });
-        window.setTimeout(finishLoader, 3200);
-      }
-
-      const header = document.querySelector('#site-header');
-      const revealed = document.querySelectorAll('.reveal:not(.is-visible)');
-
-      const setHeaderState = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
-      setHeaderState();
-      window.addEventListener('scroll', setHeaderState, { passive: true });
-
-      if ('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('is-visible');
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.14 });
-        revealed.forEach((element) => observer.observe(element));
-      } else {
-        revealed.forEach((element) => element.classList.add('is-visible'));
-      }
-    </script>
   </body>
 </html>
